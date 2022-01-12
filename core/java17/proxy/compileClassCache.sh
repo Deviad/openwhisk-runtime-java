@@ -1,3 +1,4 @@
+#!/bin/sh
 #
 # Licensed to the Apache Software Foundation (ASF) under one or more
 # contributor license agreements.  See the NOTICE file distributed with
@@ -14,8 +15,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-distributionBase=GRADLE_USER_HOME
-distributionPath=wrapper/dists
-zipStoreBase=GRADLE_USER_HOME
-zipStorePath=wrapper/dists
-distributionUrl=https\://services.gradle.org/distributions/gradle-7.3.3-bin.zip
+#### Construct Class Cache with HTTP Server classes by starting the server ####
+java -jar build/libs/javaAction-all.jar &
+HTTP_PID=$!
+sleep 2
+kill $HTTP_PID

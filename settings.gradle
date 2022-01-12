@@ -15,12 +15,21 @@
  * limitations under the License.
  */
 
+//pluginManagement {
+//    repositories {
+//       maven {
+//           url 'https://plugins.gradle.org/m2/'
+//       }
+//        gradlePluginPortal()
+//    }
+//}
 include 'tests'
 
 include 'core:java8'
 include 'core:java8:proxy'
 include 'core:java8actionloop'
-
+include 'core:java17'
+include 'core:java17:proxy'
 rootProject.name = 'runtime-java'
 
 gradle.ext.openwhisk = [

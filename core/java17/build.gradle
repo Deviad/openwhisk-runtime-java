@@ -15,32 +15,5 @@
  * limitations under the License.
  */
 
-plugins {
-    id 'scala'
-    id 'java'
-    id 'idea'
-    id 'eclipse'
-}
-
-subprojects {
-    gradle.ext.scalafmt.configFilePath = gradle.ext.scalafmt.config
-}
-allprojects {
-    repositories {
-    mavenLocal()
-    mavenCentral()
-    maven {
-        url 'https://repo.grails.org/artifactory/core/'
-        metadataSources {
-            mavenPom()
-            artifact()
-        }
-    }
-}
-}
-dependencies {
-    implementation "cz.alenkacz.gradle.scalafmt:cz.alenkacz.gradle.scalafmt.gradle.plugin:1.16.2"
-    implementation 'com.google.code.gson:gson:2.8.9'
-}
-
-
+ext.dockerImageName = 'java8action'
+apply from: '../../gradle/docker.gradle'

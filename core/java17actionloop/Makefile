@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-IMG=actionloop-java-v8:nightly
+IMG=nuvolaris-actionloop-java-v8:nightly
 PREFIX=docker.io/openwhisk
 INVOKE=python ../../tools/invoke.py
 MAIN_JAR=../../example/main.jar
@@ -35,7 +35,7 @@ start: build
 	docker run -p 8080:8080 -ti -v $(PWD):/proxy $(IMG)
 
 debug: build
-	docker run -p 8080:8080 -ti --entrypoint=/bin/bash -v $(PWD):/mnt -e OW_COMPILER=/mnt/bin/compile $(IMG)
+	docker run -p 8080:8080 -ti --entrypoint=/bin/bash -v $(PWD):/mnt -e OW_COMPILER=/usr/bin/compile $(IMG)
 
 .PHONY: build push clean start debug
 

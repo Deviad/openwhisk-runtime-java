@@ -1,3 +1,4 @@
+<!--
 #
 # Licensed to the Apache Software Foundation (ASF) under one or more
 # contributor license agreements.  See the NOTICE file distributed with
@@ -14,8 +15,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-distributionBase=GRADLE_USER_HOME
-distributionPath=wrapper/dists
-zipStoreBase=GRADLE_USER_HOME
-zipStorePath=wrapper/dists
-distributionUrl=https\://services.gradle.org/distributions/gradle-7.3.3-bin.zip
+-->
+
+# Java 8 OpenWhisk Runtime Container
+
+## 1.17.0
+  - Build actionloop from 1.16@1.18.0 (#125)
+  - Resolve akka versions explicitly. (#124, #123)
+
+## 1.16.0
+  - Use adoptopenjdk/openjdk8-openj9:x86_64-ubuntu-jdk8u282-b08_openj9-0.24.0
+  - Use 1.17.0 release of openwhisk-runtime-go (#117)
+
+## 1.15.0
+  - Include latest security fixes with every build.
+  - Use adoptopenjdk/openjdk8-openj9:x86_64-ubuntu-jdk8u262-b10_openj9-0.21.0
+  - Build proxy using go 1.15 and openwhisk-runtime-go 1.16.0
+
+## 1.14.0
+  - Initial release of actionloop-based Java Action
+  - Use adoptopenjdk/openjdk8-openj9:x86_64-ubuntu-jdk8u222-b10_openj9-0.15.1
